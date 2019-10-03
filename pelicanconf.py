@@ -34,9 +34,9 @@ DEFAULT_PAGINATION = False
 PLUGINS = ["plugins"]
 
 
-#THEME = "custom_theme"
-THEME = "attila_theme"
+THEME = "custom_theme"
+#THEME = "attila_theme"
 #THEME = "alchemy_theme"
 #THEME = "notmyidea"
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True

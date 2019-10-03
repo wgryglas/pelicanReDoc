@@ -1,3 +1,6 @@
+-------------------
+This is Main Title
+-------------------
 :date: 2010-10-03 10:20
 :modified: 2010-10-04 18:40
 :tags: example, reynolds
@@ -6,14 +9,12 @@
 :authors: Wojciech Gryglas
 :summary: Short version for index and feeds
 
--------------------
-This is Main Title
--------------------
+And now goes subtitl
+---------------------
 
-And here all begins
--------------------
+now add some text adsa
+dasd dasd dasd asd da 
 
-now add some text
 
 Write something new to se if live preview works.
 Add text in new line but rendered in the same paragrph.
@@ -35,6 +36,15 @@ This is second vector float input :vector:`10.0 25.0 13.33`
 Hello Dear
 ----------
 Next Long paragraph with 500 words :lorem:`100`
+
+.. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test/TimeControlProposition.png
+   :scale: 50 %
+
+
+.. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test/TimeControlProposition2.png
+   :scale: 50 %
+
+
 
 
 Subtitle
