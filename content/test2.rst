@@ -26,6 +26,13 @@ My name is **Wojciech**, and **Wojtek** you might call me
 
 Wojtek
 
+
+
+.. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test2/Selection_003.png
+   :scale: 50 %
+
+
+
 dads dadd
 
 Now I will write 20 words using the generator :lorem:`20`
@@ -63,6 +70,10 @@ This is second vector float input :vector:`10.0 25.0 13.33`
 Hello Dear
 ----------
 Next Long paragraph with 100 words :lorem:`100`
+
+.. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test2/example.png
+   :scale: 50 %
+
 
 
 Subtitle

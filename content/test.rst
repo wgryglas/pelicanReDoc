@@ -15,6 +15,7 @@ And now goes subtitl
 now add some text adsa
 dasd dasd dasd asd da 
 
+`Hello Dear`_
 
 Write something new to se if live preview works.
 Add text in new line but rendered in the same paragrph.
@@ -32,6 +33,9 @@ This is inline vector input :vector:`10 20 30`
 
 This is second vector float input :vector:`10.0 25.0 13.33`
 
+.. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test/Selection_002.png
+   :scale: 50 %
+
 
 Hello Dear
 ----------
@@ -43,8 +47,6 @@ Next Long paragraph with 500 words :lorem:`100`
 
 .. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test/TimeControlProposition2.png
    :scale: 50 %
-
-
 
 
 Subtitle
