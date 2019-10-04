@@ -26,10 +26,8 @@ My name is **Wojciech**, and **Wojtek** you might call me
 
 Wojtek
 
-
-
-.. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test2/Selection_003.png
-   :scale: 50 %
+.. image:: ./figures/test2/Selection_002.png
+   :width: 400 px
 
 
 
@@ -41,7 +39,7 @@ It seems to be preetty fast, or at least fast enough. To much text is moving
 around, but whatever.
 dasd a sd asd
 
-.. figure:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test/example.png
+.. figure:: ./figures/test/example.png
    :scale: 75 %
    :align: right
    
@@ -71,7 +69,7 @@ Hello Dear
 ----------
 Next Long paragraph with 100 words :lorem:`100`
 
-.. image:: /home/wgryglas/Code/Python/pelicanReDoc/content/figures/test2/example.png
+.. image:: ./figures/test2/example.png
    :scale: 50 %
 
 
@@ -94,3 +92,6 @@ Enumeration with auto numbering:
   #. Second element
   #. Third,
   #. etc...
+
+.. image:: ./figures/test2/im1.png
+   :width: 400 px

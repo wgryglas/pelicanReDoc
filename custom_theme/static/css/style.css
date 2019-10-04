@@ -1,0 +1,33 @@
+
+img {
+      display: block;
+      margin-left: auto; margin-right: auto; margin-bottom:5px; margin-top:5px;
+      padding:2px;
+      border:1px solid gray;
+}
+
+.scalar-input {
+    margin-left:2px;
+    margin-right:2px;
+    padding:3px;
+    border-radius:3px;
+    color:#c7254e;
+}
+.scalar-input:hover{
+    background:#ef4570;
+    color:#fff;
+    cursor: pointer;
+}
+.scalar-input:active{
+    background:#d82854;
+}
+
+/*
+.vector-input .scalar-input {
+    color:white;
+    background:red;
+    border-radius:3px;
+    margin-left:2px;
+    margin-right:2px;
+}
+*/
