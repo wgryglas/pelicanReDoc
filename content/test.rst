@@ -18,7 +18,7 @@ dasd dasd dasd asd da
 `Hello Dear`_
 
 Write something new to se if live preview works.
-Add text in new line but rendered in the same paragrph. 
+Add text in new line but rendered in the same paragrph.
 
 Next paragraph with equation :math:`y = sin(\pi \cdot x)`
 and centered equation:
@@ -83,17 +83,7 @@ Next Subtitle
 
 Tsad asd as das. This is reference to `And now goes subtitle`_
 
-
-.. image:: ./figures/test/ZeroGrad-U-xnormal.png
-   :width: 50 %
-
 Some new text to see how it renders. Seems to be quite all right. 
 
-
-.. image:: ./figures/test/FreestreeTemp-ynormal.png
-   :width: 50 %
-
-
-
-.. image:: ./figures/test/Freestreem-Residuals.png
-   :width: 50 %
+.. image:: ./figures/test/plecak.png
+   :width: 800 px

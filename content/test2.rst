@@ -29,8 +29,6 @@ Wojtek
 .. image:: ./figures/test2/Selection_002.png
    :width: 400 px
 
-
-
 dads dadd
 
 Now I will write 20 words using the generator :lorem:`20`
@@ -70,7 +68,7 @@ Hello Dear
 Next Long paragraph with 100 words :lorem:`100`
 
 .. image:: ./figures/test2/example.png
-   :scale: 50 %
+   :width: 400 px
 
 
 
@@ -92,6 +90,3 @@ Enumeration with auto numbering:
   #. Second element
   #. Third,
   #. etc...
-
-.. image:: ./figures/test2/im1.png
-   :width: 400 px
