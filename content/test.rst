@@ -87,3 +87,4 @@ Some new text to see how it renders. Seems to be quite all right.
 
 .. image:: ./figures/test/plecak.png
    :width: 800 px
+   
