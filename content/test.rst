@@ -83,4 +83,7 @@ Next Subtitle
 
 Tsad asd as das. This is reference to `And now goes subtitle`_
 
-Some new text to see how it renders. Seems to be quite all right.    
+Some new text to see how it renders. Seems to be quite all right.
+
+.. image:: ./figures/test/drawing.png
+   :width: 400 px
