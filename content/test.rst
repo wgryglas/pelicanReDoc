@@ -12,8 +12,8 @@ This is Main Title
 And now goes subtitle
 ---------------------
 
-now add some text adsa
-dasd dasd dasd asd da 
+now add some text adsa das 
+dasd dasd dasd asd da Wojciech
 
 `Hello Dear`_
 
