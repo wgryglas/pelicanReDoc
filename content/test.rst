@@ -88,3 +88,9 @@ Some new text to see how it renders. Seems to be quite all right.
 
 .. image:: ./figures/test/drawing.png
    :width: 400 px
+
+
+The next paragraph
+------------------
+
+What to write now? **Help me with it !!!**
