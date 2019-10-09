@@ -20,7 +20,18 @@ def vector_input_role(name, rawtext, text, lineno, inliner, options={}, content=
     return [vector(values[0], values[1], values[2], True)], []
 
 
+def input_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    from nodes import input
+    return [input(read_number_string(text), True)], []
+
+
+def id_number(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    from nodes import number
+    return [number(text)], []
+
 def register():
     from docutils.parsers.rst import roles
     roles.register_local_role("lorem", lorem_text_role)
     roles.register_local_role("vector", vector_input_role)
+    roles.register_local_role("input", input_role)
+    roles.register_local_role("number", id_number)

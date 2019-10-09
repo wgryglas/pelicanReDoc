@@ -16,10 +16,23 @@ class vector(nodes.Inline, nodes.Element):
 
 class youtube(nodes.Inline, nodes.Element):
     def __init__(self, link, title, description='', rawsource='', *children, **attributes):
-        from docutils.nodes import TextElement
+        from docutils.nodes import Text
         nodes.Element.__init__(self, rawsource)
         self.attributes['link'] = link
         self.attributes['title'] = title
-        self.append(TextElement(description))
+        self.append(Text(description))
 
 
+class note(nodes.Element):
+    def __init__(self, title, content='', rawsource='', *children, **attributes):
+        nodes.Element.__init__(self, rawsource)
+        self.attributes['title'] = title
+        self.text = content
+        # from docutils.nodes import Text
+        # self.append(Text('\n'.join(content)))
+
+
+class number(nodes.Inline, nodes.Element):
+    def __init__(self, value, rawsource='', *children, **attributes):
+        nodes.Element.__init__(self, rawsource)
+        self.number = int(value)
