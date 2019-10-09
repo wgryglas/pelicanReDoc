@@ -4,23 +4,40 @@ html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
+    scroll-behavior: smooth;
 }
 
 body {
-    padding-left:20%;
-    padding-right:20%;
     //background-color:rgb(253, 246, 227);
     font-family: proxima-nova,sans-serif;
     color: #595959;
 }
 
+.body {
+    padding-left:20%;
+    padding-right:20%;
+}
+
+
 img {
       display: block;
-      margin-left: auto; margin-right: auto; margin-bottom:5px; margin-top:5px;
+      margin-left: auto; margin-right: auto; margin-bottom:20px; margin-top:20px;
       padding:2px;
       border:1px solid gray;
       box-shadow: 0px 5px 10px #a8bad4;
 }
+
+//the default behavior
+img.align-center {
+      //margin-left: auto; margin-right: auto; margin-bottom:5px; margin-top:5px;
+}
+img.align-left {
+      margin-left: 0; margin-right: auto;
+}
+img.align-right {
+      margin-left: auto; margin-right: 0;
+}
+
 
 tt {
     padding:3px;
@@ -38,6 +55,10 @@ span.id-number {
     color:white;
     display:inline-block;
     text-align: center;
+    font: 20px Arial, sans-serif;
+    margin: 2px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 span.sf-version {
@@ -82,6 +103,19 @@ ol li::before {
     background:#d82854;
 }
 
+.vector-input::before {
+    content:'[';
+    color: #c7254e;
+}
+.vector-input::after {
+    content:']';
+    color: #c7254e;
+}
+.vector-input .vector-copy {
+    display:none
+}
+
+
 .figure p {
     text-align:center;
     font-size:10pt;
@@ -107,6 +141,12 @@ blockquote {
 ol {
     padding-inline-start: 2em;
 }
+
+ol li {
+    margin: 0;
+    margin-top: 0.5em; margin-bottom: 0.5em;
+}
+
 li p {
     margin: 0;
     padding: 0;
@@ -137,8 +177,8 @@ div.note {
     margin:0;
 }
 .note-content {
-    background-color:white;
-    color:black;
+    //background-color:white;
+    //color:black;
     padding-left: 1em; padding-right: 1em;
     padding-top: 5px; padding-bottom: 5px;
     margin:0;
@@ -151,12 +191,49 @@ div.note {
 }
 
 
-/*
-.vector-input .scalar-input {
-    color:white;
-    background:red;
-    border-radius:3px;
-    margin-left:2px;
-    margin-right:2px;
+.section {
+    margin-top:20%;
 }
-*/
+
+/* The navigation bar */
+.section-navbar {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 50%; /* Position the navbar at the top of the page */
+  left: 10%;
+  width: 80%; /* Full width */
+  padding: 0;
+  margin: 0;
+}
+
+.section-navbar button.previous {
+    float:left;
+}
+
+.section-navbar button {
+    border: none;
+    background-color:transparent;
+    //color: #385c8e;
+    color: #a8bad4;
+    font-size:20pt;
+    border-radius: 26px;
+    width:52px;
+    height:52px;
+    outline:none;
+    transition: all 0.2s ease-out;
+}
+.section-navbar button:hover {
+    background-color: #a8bad4;
+    color:white;
+}
+.section-navbar button.previous:before {
+    content: '<'
+}
+.section-navbar button.next:after {
+    content: '>'
+}
+
+.section-navbar button.next {
+    float:right;
+}

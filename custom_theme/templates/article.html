@@ -3,6 +3,7 @@
 
 {% block head %}
 <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" type="text/css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -20,4 +21,27 @@
     {{ article.content }}
   </div><!-- /.entry-content -->
 </section>
+
+<div class="section-navbar">
+    <button class="scrolling previous"></button>
+    <button class="scrolling next"></button>
+</div>
+
+
+<!--<script>-->
+<!--    $('button.back').click(function() {-->
+<!--    $.scrollTo($(this).closest('section').prev(),800);-->
+<!--    console.log('scrolling back');-->
+<!--    });-->
+
+<!--    $('button.next').click(function() {-->
+<!--        $.scrollTo($(this).closest('section').next(),800);-->
+<!--    });-->
+<!--</script>-->
+
+<script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/scrolling.js"></script>
+
+{% endblock %}
+
+{% block footer %}
 {% endblock %}

@@ -1,3 +1,5 @@
+import re
+
 
 def lorem_text_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     from docutils.nodes import Text
@@ -5,11 +7,19 @@ def lorem_text_role(name, rawtext, text, lineno, inliner, options={}, content=[]
     return [Text(random_words_as_string(int(text)))], []
 
 
+_integer_number_with_decimals_regex_ = re.compile(r'^[-+]?[0-9]+\.0+$')
+_integer_number_regex_ = re.compile(r'^[-+]?[0-9]+$')
+
+
 def read_number_string(text):
     if text.endswith('d'):
         return int(text[:-1])
     elif text.endswith('f'):
         return float(text[:-1])
+    elif _integer_number_with_decimals_regex_.match(text):  # try to format as integer
+        return int(text.split('.')[0])
+    elif _integer_number_regex_.match(text):
+        return int(text)
     else:
         return float(text)
 
@@ -28,6 +38,7 @@ def input_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
 def id_number(name, rawtext, text, lineno, inliner, options={}, content=[]):
     from nodes import number
     return [number(text)], []
+
 
 def register():
     from docutils.parsers.rst import roles

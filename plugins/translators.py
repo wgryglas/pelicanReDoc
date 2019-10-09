@@ -14,12 +14,12 @@ class SFHtmlTranslator(PelicanHTMLTranslator):
 
     def visit_vector(self, node):
         self.body.append(self.starttag(node, 'span' if node.inline else 'div', **{'class': 'vector-input'}))
-        self.body.append("[")
+        #self.body.append("[")
 
     def depart_vector(self, node):
-        self.body.append("]")
-        self.body.append('<button class="copy-vector" style="padding:3px; border-radius:3px">copy</button>')
-        self.body.append( self.endtag('span' if node.inline else 'div') )
+        #self.body.append("]")
+        self.body.append('<button class="vector-copy" style="padding:3px; border-radius:3px">copy</button>')
+        self.body.append(self.endtag('span' if node.inline else 'div'))
 
     def visit_input(self, node):
         tag_string = self.starttag(node, 'span', **{'class': 'scalar-input'})
