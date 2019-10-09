@@ -1,16 +1,67 @@
+
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
 
+body {
+    padding-left:20%;
+    padding-right:20%;
+    //background-color:rgb(253, 246, 227);
+}
 
 img {
       display: block;
       margin-left: auto; margin-right: auto; margin-bottom:5px; margin-top:5px;
       padding:2px;
       border:1px solid gray;
+      box-shadow: 0px 5px 10px #a8bad4;
 }
+
+tt {
+    padding:3px;
+    border-radius:3px;
+    color:#c7254e;
+    background-color:rgb(249, 242, 244)
+}
+
+span.id-number {
+    width:24px;
+    height:24px;
+    padding:auto;
+    border-radius:12px;
+    background:rgb(100, 136, 255);
+    color:white;
+    display:inline-block;
+    text-align: center;
+}
+
+span.sf-version {
+
+}
+
+/*
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+}
+ol li::before {
+    content: counter(my-awesome-counter) " ";
+    width:24px;
+    height:24px;
+    padding:auto;
+    border-radius:12px;
+    background:rgb(100, 136, 255);
+    color:white;
+    display:inline-block;
+    text-align: center;
+}
+*/
 
 .scalar-input {
     margin-left:2px;
@@ -18,6 +69,7 @@ img {
     padding:3px;
     border-radius:3px;
     color:#c7254e;
+    background-color:rgb(249, 242, 244)
 }
 .scalar-input:hover{
     background:#ef4570;
@@ -27,6 +79,74 @@ img {
 .scalar-input:active{
     background:#d82854;
 }
+
+.figure p {
+    text-align:center;
+    font-size:10pt;
+}
+
+h2 {
+    text-align:center;
+}
+h2:after{
+   content:'';
+   background:black;
+   width:100%;
+   height:1px;
+   display:block;
+   margin:auto;
+}
+
+
+blockquote {
+    margin-inline-start: 0em;
+}
+ol {
+    padding-inline-start: 2em;
+}
+li p {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-border-color: #385c8e;
+    --main-background-color: #7793d6;
+}
+
+div.note {
+    padding:0px;
+    margin-left: auto; margin-right: auto;
+    display:block;
+    border-radius:5px;
+    box-shadow: 0px 5px 10px #a8bad4;
+}
+
+.note-title {
+    font-weight: bold;
+    border-left:1px solid #385c8e; border-right:1px solid #385c8e; border-top:1px solid #385c8e;
+    border-bottom:1px solid #385c8e;
+    border-radius: 5px 5px 0 0;
+    background-color: #7793d6;
+    color:white;
+    padding-left: 1em; padding-right: 1em;
+    padding-top: 5px; padding-bottom: 5px;
+    margin:0;
+}
+.note-content {
+    background-color:white;
+    color:black;
+    padding-left: 1em; padding-right: 1em;
+    padding-top: 5px; padding-bottom: 5px;
+    margin:0;
+    border-radius: 0 0 5px 5px;
+    border-left:1px solid #385c8e; border-right:1px solid #385c8e; border-bottom:1px solid #385c8e;
+}
+.note-content p {
+    margin: 0;
+    padding: 0;
+}
+
 
 /*
 .vector-input .scalar-input {

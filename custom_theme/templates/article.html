@@ -9,10 +9,12 @@
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
  {% import 'translations.html' as translations with context %}
  {{ translations.translations_for(article) }}
+      <select class="sf-version" onchange="location = this.value;">
+          <option value="https://sim-flow.com">SimFlow {{article.version}}</option>
+      </select>
   </header>
   <div class="entry-content">
     {{ article.content }}
