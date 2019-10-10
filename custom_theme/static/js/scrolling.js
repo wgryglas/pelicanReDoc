@@ -1,6 +1,6 @@
 $(function(){
     var pagePositon = 0,
-        sectionsSeclector = '.section',
+        sectionsSeclector = '.section, .entry-title',
         $scrollItems = $(sectionsSeclector),
         offsetTolorence = 30,
         pageMaxPosition = $scrollItems.length - 1;

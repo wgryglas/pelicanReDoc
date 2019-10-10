@@ -25,7 +25,7 @@ class youtube(nodes.Inline, nodes.Element):
 
 class note(nodes.Element):
     def __init__(self, title, content='', rawsource='', *children, **attributes):
-        nodes.Element.__init__(self, rawsource)
+        nodes.Element.__init__(self, rawsource, *children, **attributes)
         self.attributes['title'] = title
         self.text = content
         # from docutils.nodes import Text

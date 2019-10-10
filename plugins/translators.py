@@ -28,16 +28,17 @@ class SFHtmlTranslator(PelicanHTMLTranslator):
     def depart_input(self, node):
         self.body.append(self.endtag('span'))
 
-    def visit_note(self, node):
-        self.body.append(self.starttag(node, 'div', **{'class': 'note'}))
-        self.body.append('<p class="note-title">{}</p>'.format(node.attributes['title']))
-        self.body.append('<div class="note-content">')
-        for t in node.text:
-            self.body.append('<p>{}</p>'.format(t))
-        self.body.append(self.endtag('div'))
+    # def visit_note(self, node):
+    #     self.body.append(self.starttag(node, 'div', **{'class': 'note'}))
+    #     self.body.append('<p class="note-title">{}</p>'.format(node.attributes['title']))
+    #     self.body.append('<div class="note-content">')
+    #     for t in node.text:
+    #         self.body.append('<p>{}</p>'.format(t))
+    #     self.body.append(self.endtag('div'))
+    #
+    # def depart_note(self, node):
+    #     self.body.append(self.endtag('div'))
 
-    def depart_note(self, node):
-        self.body.append(self.endtag('div'))
 
     def visit_number(self, node):
         self.body.append('<span class=id-number>{}</span>'.format(node.number))
