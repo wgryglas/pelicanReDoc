@@ -12,7 +12,7 @@ This is the title
 And here all begins
 -------------------
 
-now add some text ads asd as da s 
+now add some text ads asd as da s
 
 Write something new to se if live preview works.
 Add text in new line but rendered in the same paragrph.

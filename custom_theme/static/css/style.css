@@ -36,7 +36,7 @@ img {
       //padding:2px;
       //border:1px solid gray;
       //box-shadow: 0px 5px 10px #a8bad4;
-      box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+      //box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
       max-width:100%;
 }
 
@@ -223,7 +223,7 @@ div.admonition {
 
 
 .section {
-    margin-top:20%;
+    margin-bottom:20%;
 }
 
 /* The navigation bar */
@@ -238,36 +238,42 @@ div.admonition {
   width: 100%; /* Full width */
   max-width: 1100px;
   transform: translate(-50%, 0%);
-
+  display:none;
 }
 
 .section-navbar button.previous {
     float:left;
+    align:bottom;
 }
 
 .section-navbar button.next {
     float:right;
 }
 
-.section-navbar button {
+button.scrolling {
     border: none;
     background-color:transparent;
     //color: #385c8e;
     color: #a8bad4;
-    font-size:20pt;
-    border-radius: 26px;
-    width:52px;
-    height:52px;
+    font-size:14pt;
+    border-radius: 20px;
+    width:40px;
+    height:40px;
     outline:none;
     transition: all 0.2s ease-out;
+    font-family: curier;
 }
-.section-navbar button:hover {
+button.scrolling:hover {
     background-color: #a8bad4;
     color:white;
 }
-.section-navbar button.previous:before {
+button.scrolling.previous:before {
     content: '<'
 }
-.section-navbar button.next:after {
+button.scrolling.next:after {
     content: '>'
+}
+
+.in-text {
+    float: right;
 }
