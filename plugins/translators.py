@@ -39,6 +39,10 @@ class SFHtmlTranslator(PelicanHTMLTranslator):
     # def depart_note(self, node):
     #     self.body.append(self.endtag('div'))
 
+    def visit_section(self, node):
+        self.body.append('<button class="in-text scrolling next"></button>')
+        self.body.append('<button class="in-text scrolling previous"></button>')
+        PelicanHTMLTranslator.visit_section(self, node)
 
     def visit_number(self, node):
         self.body.append('<span class=id-number>{}</span>'.format(node.number))
