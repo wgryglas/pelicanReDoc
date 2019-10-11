@@ -8,9 +8,7 @@ This is Main Title
 :slug: my-super-post
 :authors: Wojciech Gryglas
 :summary: Short version for index and feeds
-
-.. image:: ./figures/test/screenshot_0.png
-   :class: banner
+:version: 4.0
 
 And now goes subtitle
 ---------------------
