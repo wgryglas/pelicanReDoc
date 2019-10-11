@@ -9,6 +9,9 @@ This is Main Title
 :authors: Wojciech Gryglas
 :summary: Short version for index and feeds
 
+.. image:: ./figures/test/screenshot_0.png
+   :class: banner
+
 And now goes subtitle
 ---------------------
 
@@ -25,7 +28,6 @@ Next paragraph with equation :math:`y = sin(\pi \cdot x)`
 and centered equation:
 
 .. math::
-
 	y = \int_a^b x^2 \cdot \beta
 
 Rest of the text :lorem:`100`
@@ -38,12 +40,21 @@ How old are you. Como estas.
 Next line(paragraph)
 
 .. image:: ./figures/test/Selection_002.png
-   :width: 50 %
+
+
+Section
+-------
 
 The list can't exist without the front text?
+
   * Test
   * Test
   * Test
+  
+.. tip:: This is example tip for your reader. :lorem:`50`
+.. note:: Remember, do it right :lorem:`50`
+.. warning:: Be warned, you are wrong all the time :lorem:`50`
+
 
 
 Hello Dear
@@ -56,8 +67,6 @@ dasdd  das d dsa ds dsa da
 
 .. image:: ./figures/test/TimeControlProposition.png
 
-.. image:: ./figures/test/TimeControlProposition2.png
-
 
 Subtitle
 --------
@@ -65,10 +74,18 @@ Subtitle
 Now, let us see some enumeration:
 
 The list name:
+
   - a text
   - a second element
+  
 
+.. image:: ./figures/test/TimeControlProposition2.png
+
+  
+Slide
+-----
 Enumeration with auto numbering:
+
   #. First element
   #. Second element
   #. Third,
@@ -87,7 +104,6 @@ Tsad asd as das. This is reference to `And now goes subtitle`_
 Some new text to see how it renders. Seems to be quite all right.
 
 .. image:: ./figures/test/drawing.png
-   :width: 400 px
 
 
 The next paragraph

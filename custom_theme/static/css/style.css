@@ -221,6 +221,10 @@ div.admonition {
     color:rgb(213, 0, 0);
 }
 
+.tip {
+    background-color:rgb(244, 252, 248);
+    color:rgb(37, 193, 111);
+}
 
 .section {
     margin-bottom:20%;

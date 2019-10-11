@@ -27,7 +27,7 @@ My name is **Wojciech**, and **Wojtek** you might call me
 Wojtek
 
 .. image:: ./figures/test2/Selection_002.png
-   :width: 400 px
+
 
 dads dadd
 
