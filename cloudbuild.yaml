@@ -1,0 +1,21 @@
+steps:
+  - name: gcr.io/cloud-builders/git
+    args: ['clone', '-b', '${_BRANCH}', '--single-branch', '--depth', '1', 'https://github.com/wgryglas/pelicanReDoc.git']
+
+  - name: gcr.io/${PROJECT_ID}/doc-build:latest
+    args: ["build"]
+    dir: pelicanReDoc
+
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: gsutil
+    args: ["-m", "rsync", "-r", "-c", "-d", "./output", "gs://documentation-website-sf"]
+    dir: pelicanReDoc
+
+substitutions:
+  _BRANCH: master
+#  _SUB_DOMAIN: www
+
+
+
+# To build using gcloud tools run command (make sure that appropriate project is specified):
+# gcloud builds submit --config cloudbuild.yaml --no-source

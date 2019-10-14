@@ -10,6 +10,10 @@ This is Main Title
 :summary: Short version for index and feeds
 :version: 4.0
 
+
+.. image:: ./figures/test/screenshot_0.png
+   :class: baner
+
 And now goes subtitle
 ---------------------
 
@@ -21,6 +25,13 @@ dasd dasd dasd asd da Wojciech
 Write something new to se if live preview works.
 This should be the same line still, as I havn't add extra new line.
 Add text in new line but rendered in the same paragrph.
+
+.. figure:: ./figures/test/tutorialstesla_valve-intro.png
+   
+   On Figure 1 you can see flow from left to right, while on the Figure 2
+   from right to left. 
+
+
 
 Next paragraph with equation :math:`y = sin(\pi \cdot x)`
 and centered equation:
@@ -92,7 +103,6 @@ Enumeration with auto numbering:
 
 
 .. image:: ./figures/test/example.png
-   :width: 50 %
 
 
 Next Subtitle
