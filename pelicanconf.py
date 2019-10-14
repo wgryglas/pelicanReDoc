@@ -7,11 +7,7 @@ SITENAME = u'example-doc'
 SITEURL = 'index.html'
 
 PATH = 'content'
-STATIC_PATHS = ['figures', 'extra']
-
-EXTRA_PATH_METADATA = {
-    'extra/404.html': {'path': '404.html'}
-}
+STATIC_PATHS = ['figures']
 
 TIMEZONE = 'Europe/Paris'
 
