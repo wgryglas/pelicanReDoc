@@ -1,6 +1,11 @@
 steps:
-  - name: gcr.io/cloud-builders/git
-    args: ['clone', '-b', '${_BRANCH}', '--single-branch', '--depth', '1', 'https://github.com/wgryglas/pelicanReDoc.git']
+# use clone from github
+#  - name: gcr.io/cloud-builders/git
+#    args: ['clone', '-b', '${_BRANCH}', '--single-branch', '--depth', '1', 'https://github.com/wgryglas/pelicanReDoc.git']
+
+# use clone from gcloud source repository which is a mirror of github repository
+  - name: gcr.io/cloud-builders/gcloud
+    args: ['source', 'repos', 'clone', 'github_wgryglas_pelicanredoc']
 
   - name: gcr.io/${PROJECT_ID}/doc-build:latest
     args: ["info"]
