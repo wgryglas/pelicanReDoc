@@ -32,6 +32,11 @@ def clean(c):
         shutil.rmtree(CONFIG['deploy_path'])
         os.makedirs(CONFIG['deploy_path'])
 
+
+@task
+def info(c):
+    c.run('pelican --version')
+
 @task
 def build(c):
     """Build local version of site"""

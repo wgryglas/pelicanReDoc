@@ -3,12 +3,15 @@ steps:
     args: ['clone', '-b', '${_BRANCH}', '--single-branch', '--depth', '1', 'https://github.com/wgryglas/pelicanReDoc.git']
 
   - name: gcr.io/${PROJECT_ID}/doc-build:latest
+    args: ["info"]
+
+  - name: gcr.io/${PROJECT_ID}/doc-build:latest
     args: ["build"]
     dir: pelicanReDoc
 
   - name: gcr.io/cloud-builders/gcloud
     entrypoint: gsutil
-    args: ["-m", "rsync", "-r", "-c", "-d", "./output", "gs://documentation-website-sf"]
+    args: ["-m", "rsync", "-r", "-c", "-d", "./output", "gs://docs.wgryglas.pl"]
     dir: pelicanReDoc
 
 substitutions:
