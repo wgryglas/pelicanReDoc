@@ -199,6 +199,9 @@ div.admonition {
 
     display:inline-block;
     opacity:0.5;
+
+    border-top-right-radius:40px;
+    border-bottom-right-radius:40px;
 }
 
 div.admonition:hover {
@@ -209,6 +212,9 @@ div.admonition:hover {
 div.admonition[active]{
     display:block;
     opacity:1;
+
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
 }
 
 div.admonition > * {
@@ -299,8 +305,10 @@ div.admonition[active] > * {
 button.scrolling {
     border: none;
     background-color:transparent;
+    //background-color:rgba(43, 43, 43, 0);
     //color: #385c8e;
-    color: #a8bad4;
+    //color: #a8bad4;
+    color: rgba(168, 186, 212, 0.75);
     font-size:14pt;
     border-radius: 20px;
     width:40px;
@@ -309,15 +317,22 @@ button.scrolling {
     transition: all 0.2s ease-out;
     font-family: curier;
 
-    position: relative;
     float: right;
+    margin-bottom: 20px;
 }
-
 
 button.scrolling:hover {
-    background-color: #a8bad4;
+    background-color:rgba(168, 186, 212, 0.5);
+    border: 1px solid rgba(168, 186, 212, 0.75);
     color:white;
 }
+button.scrolling:active {
+    //background-color: #a8bad4;
+    background-color:rgba(168, 186, 212, 0.75);
+    border: 1px solid rgba(168, 186, 212, 0.75);
+    color:white;
+}
+
 button.scrolling.previous:before {
     content: '<'
 }
