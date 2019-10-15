@@ -1,0 +1,9 @@
+
+
+
+import pelican
+
+pelican.main()
+
+
+
