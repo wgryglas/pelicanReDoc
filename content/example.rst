@@ -245,7 +245,7 @@ fluid region.
 Hot fluid region (IV)
 ====================================================
 
-Meshing
+Crete Mesh
 ----------------------------------------------------
 
 Now, it's time to create the mesh of the hot fluid region.
@@ -360,7 +360,7 @@ The following steps must be taken:
 Cold fluid region (II)
 ====================================================
 
-Background mesh definition
+Background mesh definition 
 ----------------------------------------------------
 
 The background mesh remains the same as for hot fluid
@@ -487,11 +487,10 @@ Interpolation: Linear
 
 Solution
 ====================================================
-
 Solver Tab
 ----------------------------------------------------
 
-For :math:`p-{\rho}gh`, U and h choose Smooth Solver with the settings as below:
+For :math:`p-{\rho} g h`, U and h choose Smooth Solver with the settings as below:
 
 |image31|
 
@@ -510,7 +509,6 @@ We will neglect the influence of the gravity
 
 Boundary conditions (I)
 ====================================================
-
 Baffles
 ----------------------------------------------------
 
@@ -536,6 +534,7 @@ to define the wall thickness :math:`\delta` in [m] and thermal conductivity
 Boundary conditions (II)
 ====================================================
 Walls - heatExchangerWall_cold and heatExchangerWall_hot
+---------------------------------------------------------
 
 We will assume that walls of the heat exchanger are adiabatic
 
@@ -543,7 +542,6 @@ We will assume that walls of the heat exchanger are adiabatic
 
 Boundary conditions (III)
 ====================================================
-
 Interface between fluids internal_reduce
 ----------------------------------------------------
 
@@ -554,7 +552,6 @@ and cold regions are not identical. But the walls will be coupled.
 
 Boundary conditions (IV)
 ====================================================
-
 Inlet and outlets
 ----------------------------------------------------
 
