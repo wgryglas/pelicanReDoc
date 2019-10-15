@@ -1,6 +1,12 @@
 import docutils.nodes as nodes
 
 
+class inlinetext(nodes.Inline, nodes.Element):
+    def __init__(self, text, rawsource='', *children, **attributes):
+        textnode = nodes.Text('{}'.format(text))
+        nodes.Element.__init__(self, rawsource, textnode, *children, **attributes)
+
+
 class input(nodes.Inline, nodes.Element):
     def __init__(self, value, rawsource='', *children, **attributes):
         textnode = nodes.Text('{}'.format(value))

@@ -39,6 +39,13 @@ class SFHtmlTranslator(PelicanHTMLTranslator):
     # def depart_note(self, node):
     #     self.body.append(self.endtag('div'))
 
+    def visit_inlinetext(self, node):
+        pass
+        # self.body.append(self.starttag(node, 'span'))
+
+    def depart_inlinetext(self, node):
+        pass
+
     def visit_section(self, node):
         self.body.append('<button class="in-text scrolling next"></button>')
         self.body.append('<button class="in-text scrolling previous"></button>')
