@@ -4,6 +4,7 @@ steps:
 
   - name: gcr.io/${PROJECT_ID}/doc-build:latest
     args: ["info"]
+    dir: pelicanReDoc
 
   - name: gcr.io/${PROJECT_ID}/doc-build:latest
     args: ["build"]
