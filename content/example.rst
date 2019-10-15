@@ -1,6 +1,6 @@
-----------------------------------------------------
+====================================================
 CONJUGATE HEAT TRANSFER (CHT) SIMULATION in simFlow
-----------------------------------------------------
+====================================================
 :date: 2019-10-08 22:27
 :modified: 2019-10-08 22:27
 :tags: example, reynolds
@@ -15,7 +15,7 @@ CONJUGATE HEAT TRANSFER (CHT) SIMULATION in simFlow
    :class: banner
 
 Introduction
-------------
+====================================================
 
 In this tutorial we will perform a conjugate heat transfer ( CHT )
 analysis based on the heat exchanger example. We will demonstrate a
@@ -52,7 +52,7 @@ only solid to fluid regions. We can have multiple regions (two and more)
 also including solid-solid and fluid-fluid interactions.
 
 Objectives of the analysis
---------------------------
+====================================================
 We would like to analyze and optimize the flow through the heat
 exchanger. It is easy to imagine that in the optimization process we
 would like to investigate several different geometries (layout of the
@@ -64,7 +64,7 @@ process of optimization and get the most out of our simulations.
 
 
 Approach
---------------------------
+====================================================
 We will start with the baseline geometry presented in Figure 1. The
 geometry of our heat exchanger consists of hot fluid inlet and outlet
 section, cold fluid inlet and outlet section with pipes inside and
@@ -85,7 +85,7 @@ process - Figure 2 (increased number of inner pipes).
 
 
 Create case
---------------------------
+====================================================
 After starting simFlow we need to define a new case in the working
 directory (all your files will be stored in <Workspace>/<Case
 Name>/<Case Name> ):
@@ -96,7 +96,7 @@ Name>/<Case Name> ):
 |image2|
 
 Load geometry
---------------------------
+====================================================
 In the main window go to Geometry section 1 and then press Load geometry
 button 2 . The Select file windows appears which allows you loading CAD
 files you need 3. Once all the necessary files are selected press Open
@@ -128,7 +128,7 @@ In this tutorial we need to modify the surface quality representation
 for components: internal_reduced and heat_exchanger_shell.
 
 Geometry
---------
+====================================================
 You can examine the geometry in simFlow, by manipulating the view,
 turning on and off particular components that were loaded. Please note
 that inlet and outlets are the separate components. It was done by
@@ -149,7 +149,7 @@ need to scale it to [m]. To do it please perform the following steps:
 
 
 Meshing
--------
+====================================================
 Since we are going to perform CHT simulation, we need to create mesh
 that represents each fluid and solid region. In the typical heat
 exchanger we would have 3 regions: hot fluid region, cold fluid region
@@ -181,8 +181,10 @@ terms of conjugate heat transfer simulations and demonstrate the
 workflow process.
 
 Hot fluid region (I)
---------------------------
+====================================================
+
 Selection of the geometry for the meshing
+----------------------------------------------------
 
 First, we will create the mesh for the hot fluid region.
   #. Go to the Hex Meshing section
@@ -196,8 +198,10 @@ First, we will create the mesh for the hot fluid region.
 |image7|
 
 Hot fluid region (II)
---------------------------
-Background mesh definition.
+====================================================
+
+Background mesh definition
+----------------------------------------------------
 
 Then, let's switch to Base tab.
 
@@ -220,8 +224,10 @@ Then, let's switch to Base tab.
 |image8|
 
 Hot fluid region (III)
---------------------------
+====================================================
+
 Define the point in the mesh (hot fluid)
+----------------------------------------------------
 
 Now we need to define a point which is in the first fluid region - hot
 fluid region.
@@ -236,8 +242,10 @@ fluid region.
 
 
 Hot fluid region (IV)
---------------------------
+====================================================
+
 Meshing
+----------------------------------------------------
 
 Now, it's time to create the mesh of the hot fluid region.
 
@@ -249,8 +257,10 @@ Now, it's time to create the mesh of the hot fluid region.
 |image10|
 
 Hot fluid region (V)
---------------------------
+====================================================
+
 Examine the mesh
+----------------------------------------------------
 
 When the meshing is completed, simFlow will go to the MESH section 1. 
 Also, in the terminal we will get the confirmation that the process is
@@ -281,8 +291,10 @@ mesh is distorted. This mesh is not satisfactory! ( 1 )
 |image14|
 
 Hot fluid region (VI)
---------------------------
+====================================================
+
 Improve the mesh in hot fluid region
+----------------------------------------------------
 
 We will go back to Hex Meshing panel 1  and increase Max level to 2 for
 internal_reduced and heatExchanger_shell components 2 . Then go back
@@ -299,8 +311,10 @@ mesh. Now the quality should be acceptable for our needs.
 |image16|
 
 Hot fluid region (VII)
---------------------------
+====================================================
+
 Create hot fluid sub-region
+----------------------------------------------------
 
 Now the last step in meshing of hot fluid region is to create the sub-region:
 
@@ -318,7 +332,7 @@ then we would remove the existing mesh, once the mesh for the new region
 is created.
 
 Cold fluid region (I)
-------------------------
+====================================================
 Now we can mesh the second region of the cold fluid. Basically the
 process is identical as in meshing of hot fluid regions described in
 sections I to VII. Therefore, here we will limit the description only to
@@ -343,15 +357,19 @@ The following steps must be taken:
 |image18|
 
 Cold fluid region (II)
-------------------------
-Background mesh definition.
+====================================================
+
+Background mesh definition
+----------------------------------------------------
 
 The background mesh remains the same as for hot fluid
 
 
 Cold fluid region (III)
-------------------------
+====================================================
+
 Define the point in the mesh (cold fluid)
+----------------------------------------------------
 
 We need to move a point in the cold fluid region
 
@@ -365,7 +383,7 @@ We need to move a point in the cold fluid region
 |image19|
 
 Cold fluid region (IV)
-------------------------
+====================================================
 Section IV to VII should be done in the same way as for hot fluid region:
 
   - verify the mesh quality
@@ -412,7 +430,7 @@ below - 3 and 4 .
 |image22|
 
 Solver
--------
+====================================================
 
 Now we are ready to set-up the solver
 
@@ -425,7 +443,7 @@ Now we are ready to set-up the solver
 |image23|
 
 Radiation
----------
+====================================================
 It is possible to include another type of heat transfer - radiation.
 However, in this tutorial we will skip it.
 
@@ -435,14 +453,14 @@ However, in this tutorial we will skip it.
 
 
 Turbulence
-----------
+====================================================
 
 We will model the flow as laminar
 
 |image25|
 
 Thermophysical properties
--------------------------
+====================================================
 
 Now we need to define the fluid properties. We will assume that working
 fluid for hot and cold region is water.
@@ -450,29 +468,27 @@ fluid for hot and cold region is water.
 |image26|
 
 Discretization
---------------
+====================================================
 In the discretization panel choose the following:
 
 Time: steady state
-
+|image27|
+ 
 Convection: Upwind
+|image28|
 
 Gradients: Gauss Linear and Corrected Surface Normal Gradient
+|image29|
 
 Interpolation: Linear
+|image30|
 
- |image27|
-
- |image28|
-
- |image29|
-
- |image30|
 
 Solution
----------
+====================================================
 
 Solver Tab
+----------------------------------------------------
 
 For :math:`p-{\rho}gh`, U and h choose Smooth Solver with the settings as below:
 
@@ -486,14 +502,16 @@ For tabs SIMPLE, Residuals, Relaxation and Limits use the default
 settings.
 
 Operating conditions
---------------------
+====================================================
 We will neglect the influence of the gravity
 
 |image33|
 
 Boundary conditions (I)
------------------------
+====================================================
+
 Baffles
+----------------------------------------------------
 
 In our case the baffles (the master and slave side) have conformal
 meshes - there are treated as a coupled wall. For equations other than
@@ -515,7 +533,7 @@ to define the wall thickness :math:`\delta` in [m] and thermal conductivity
 |image34|
 
 Boundary conditions (II)
-------------------------
+====================================================
 Walls - heatExchangerWall_cold and heatExchangerWall_hot
 
 We will assume that walls of the heat exchanger are adiabatic
@@ -523,8 +541,10 @@ We will assume that walls of the heat exchanger are adiabatic
 |image35|
 
 Boundary conditions (III)
--------------------------
+====================================================
+
 Interface between fluids internal_reduce
+----------------------------------------------------
 
 Here we are using the mapped_wall boundary condition. The meshes in hot
 and cold regions are not identical. But the walls will be coupled.
@@ -532,8 +552,10 @@ and cold regions are not identical. But the walls will be coupled.
 |image36|
 
 Boundary conditions (IV)
-------------------------
+====================================================
+
 Inlet and outlets
+----------------------------------------------------
 
 For inlets we will use velocity inlet boundary condition. Hot fluid
 inlet temperature will be :input:`383d` K, for cold fluid :input:`283d` K.
@@ -541,28 +563,31 @@ inlet temperature will be :input:`383d` K, for cold fluid :input:`283d` K.
 For the outlet, pressure outlet boundary condition will be used.
 
 Hot inlet
----------
+====================================================
 |image37|
 
+
 Hot outlet and cold outlet
----------------------------
+====================================================
 |image38|
 
 
 Cold inlet
-----------
+====================================================
 |image39|
 
+
 Initial conditions
-------------------
+====================================================
 Initial conditions must be set for each fluid region. Initial velocity
 and temperature should be set as for hot inlet for hot fluid region and
 cold inlet for cold fluid region
 
 |image40|
 
+
 RUN
----------
+====================================================
   1. Define :input:`5000d` iterations
   2. Define number of CPUs
   3. Press Run button
@@ -570,8 +595,7 @@ RUN
 |image41|
 
 Post-processing in ParaView
-
-
+====================================================
 
 .. |image0| image:: ./figures/example/image34.png
    

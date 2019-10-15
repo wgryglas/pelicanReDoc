@@ -145,15 +145,24 @@ ol li::before {
 
 h2 {
     text-align:center;
+    margin-left:80px;
+}
+
+h2:before {
+    margin-top: 20px;
 }
 h2:after{
    content:'';
    background:rgba(0, 0, 0, 0.15);
-   width:100%;
+   width:calc(100%+80px);
    height:1px;
    display:block;
    margin:auto;
-   margin-top: 20px;
+   margin-left:-80px;
+}
+
+h3 {
+    text-align:center;
 }
 
 
@@ -184,16 +193,32 @@ div.admonition {
     padding: 0;
     margin: 0;
     padding-left: 2em; padding-right: 2em;
-    display:block;
     font-size:14px;
     font-family: Roboto;
     padding-top: 16px; padding-bottom: 16px;
+
+    display:inline-block;
+    opacity:0.5;
 }
 
-.admonition p {
-    display: inline;
+div.admonition:hover {
+    opacity:1;
+}
+
+
+div.admonition[active]{
+    display:block;
+    opacity:1;
+}
+
+div.admonition > * {
+    display:none;
     padding: 0;
     margin: 0;
+}
+
+div.admonition[active] > * {
+    display: inline;
 }
 
 .admonition blockquote, ul, li {
@@ -206,10 +231,27 @@ div.admonition {
     padding-top: 5px; padding-bottom: 5px;
     margin-right: 0.5em;
     display: inline;
+    cursor: pointer;
 }
-.admonition-title:after {
-    content: ':';
+
+.admonition p.admonition-title {
+    display: inline;
 }
+
+
+/*
+.admonition[active=true] p.admonition-title:before {
+    content: '<';
+    margin-right:5px;
+}
+.admonition p.admonition-title:after {
+    content: '>';
+    margin-left:5px;
+}
+.admonition[active] p.admonition-title:after {
+    content: '';
+}
+*/
 
 .note {
     background-color:rgb(225, 245, 254);
@@ -266,7 +308,12 @@ button.scrolling {
     outline:none;
     transition: all 0.2s ease-out;
     font-family: curier;
+
+    position: relative;
+    float: right;
 }
+
+
 button.scrolling:hover {
     background-color: #a8bad4;
     color:white;
@@ -276,8 +323,4 @@ button.scrolling.previous:before {
 }
 button.scrolling.next:after {
     content: '>'
-}
-
-.in-text {
-    float: right;
 }

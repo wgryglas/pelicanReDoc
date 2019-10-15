@@ -46,9 +46,14 @@ class SFHtmlTranslator(PelicanHTMLTranslator):
     def depart_inlinetext(self, node):
         pass
 
+    # def visit_title(self, node):
+    #     PelicanHTMLTranslator.visit_title(self, node)
+
     def visit_section(self, node):
-        self.body.append('<button class="in-text scrolling next"></button>')
-        self.body.append('<button class="in-text scrolling previous"></button>')
+        from docutils.nodes import section
+        if not isinstance(node.parent, section):
+            self.body.append('<button class="in-text scrolling next"></button>')
+            self.body.append('<button class="in-text scrolling previous"></button>')
         PelicanHTMLTranslator.visit_section(self, node)
 
     def visit_number(self, node):
