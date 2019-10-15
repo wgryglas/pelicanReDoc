@@ -197,11 +197,18 @@ div.admonition {
     font-family: Roboto;
     padding-top: 16px; padding-bottom: 16px;
 
-    display:inline-block;
+    //display:inline-block;
+    //display: flex;
+    //justify-content:center;
+    //align-items: start;
+    width: 3em;
+
     opacity:0.5;
 
     border-top-right-radius:40px;
     border-bottom-right-radius:40px;
+
+    //margin-right:100%;
 }
 
 div.admonition:hover {
@@ -215,6 +222,10 @@ div.admonition[active]{
 
     border-top-right-radius:0;
     border-bottom-right-radius:0;
+
+    //margin-right:auto;
+    width:auto;
+
 }
 
 div.admonition > * {

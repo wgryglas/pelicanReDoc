@@ -108,7 +108,6 @@ button 4  (you may also load additional CAD files later on).
    that the edges representation is not sharp - see the example of 
    the internal parts of our heat exchanger.
 
-d
 
 .. warning:: Title for the sest test test test ad as
 
