@@ -1,0 +1,7 @@
+#This command will run test build using cloudbuild.yaml file and store result in test-output folder.
+# Any data written to this folder will be similarly visible on glcoud remote docker container
+
+# Note, usually cloudbuild uses generic project name, therfore you must be sure that your glcoud local tool
+# is configured with right active project
+
+cloud-build-local --config=/home/wgryglas/Code/Python/pelicanReDoc/cloudbuild.yaml --dryrun=false --no-source --write-workspace="/home/wgryglas/Code/gCloud/cloud-build/doc-build/test-output"

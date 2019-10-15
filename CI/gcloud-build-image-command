@@ -1,0 +1,6 @@
+
+# Before make sure that your gcloud tool is configured to use right gcloud project, eg:
+# > gcloud config set project documentation-255917
+# Note the project have to have enabled "cloud build api"
+
+gcloud builds submit --config cloudbuild.yaml .
