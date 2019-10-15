@@ -15,10 +15,11 @@ re-inventing the wheel
 
 
 To make it work you need to install additional python packages:
- - pelican
- - invoke
- - .... don't remember more now
- 
+  - pip install --no-cache-dir --upgrade setuptools
+  - pip install --no-cache-dir --upgrade docutils
+  - pip install --no-cache-dir --upgrade pelican
+  - pip install --no-cache-dir --upgrade loremipsum 
+  - pip install --no-cache-dir --upgrade invoke
 
 then you just go to the root dir and apply command:
 
