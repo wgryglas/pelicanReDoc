@@ -35,7 +35,10 @@ def clean(c):
 
 @task
 def info(c):
+    c.run('echo Pelican')
     c.run('pelican --version')
+    c.run('echo Python')
+    c.run('python --version')
 
 @task
 def build(c):
