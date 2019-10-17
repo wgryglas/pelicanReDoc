@@ -347,11 +347,10 @@ button.scrolling:active {
 button.scrolling.previous:before {
     content: '<'
 }
+
 button.scrolling.next:after {
     content: '>'
 }
-
-
 
 
 .copy-tooltip {

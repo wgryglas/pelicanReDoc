@@ -21,7 +21,7 @@ And now goes subtitle
 now add some text adsa das
 dasd dasd dasd asd da Wojciech
 
-.. `Hello Dear`_
+`Hello Dear`_
 
 Write something new to se if live preview works.
 This should be the same line still, as I havn't add extra new line.
@@ -31,8 +31,6 @@ Add text in new line but rendered in the same paragrph.
 
    On Figure 1 you can see flow from left to right, while on the Figure 2
    from right to left.
-
-
 
 Next paragraph with equation :math:`y = sin(\pi \cdot x)`
 and centered equation:

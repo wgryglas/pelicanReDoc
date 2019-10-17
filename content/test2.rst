@@ -67,7 +67,7 @@ Hello Dear
 ----------
 Next Long paragraph with 100 words :lorem:`100`
 
-.. image:: ./figures/test2/example.png
+.. image:: ./figures/test2/example.png 
    :width: 400 px
 
 
@@ -82,12 +82,15 @@ asddasd ads  as dsa dasds d asd
 Now, let us see some enumeration:
 
 The list name:
+
   - a text
   - a second element
 
 Enumeration with auto numbering:
+
   #. First element
   #. Second element
   #. Third,
   #. etc...
   
+
