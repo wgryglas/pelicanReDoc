@@ -1,8 +1,7 @@
 
 
 def register():
-    import roles, translators, math, directives
-    #, pdf
+    import roles, translators, math, directives, pdf
     roles.register()
     translators.register()
     math.register()

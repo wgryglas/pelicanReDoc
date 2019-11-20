@@ -1,9 +1,7 @@
 steps:
-
 # use clone from github
-# No need to clone, repo is mirrored and automatically installed in root directory
-#  - name: gcr.io/cloud-builders/git
-#    args: ['clone', '-b', '${_BRANCH}', '--single-branch', '--depth', '1', 'https://github.com/wgryglas/pelicanReDoc.git']
+  - name: gcr.io/cloud-builders/git
+    args: ['clone', '-b', '${_BRANCH}', '--single-branch', '--depth', '1', 'https://github.com/wgryglas/pelicanReDoc.git']
 
 # use clone from gcloud source repository which is a mirror of github repository (note need to change path or )
 #  - name: gcr.io/cloud-builders/gcloud
@@ -11,16 +9,16 @@ steps:
 
   - name: gcr.io/${PROJECT_ID}/doc-build:latest
     args: ["info"]
-#    dir: pelicanReDoc
+    dir: pelicanReDoc
 
   - name: gcr.io/${PROJECT_ID}/doc-build:latest
     args: ["build"]
-#    dir: pelicanReDoc
+    dir: pelicanReDoc
 
   - name: gcr.io/cloud-builders/gcloud
     entrypoint: gsutil
     args: ["-m", "rsync", "-r", "-c", "-d", "./output", "gs://docs.wgryglas.pl"]
-#    dir: pelicanReDoc
+    dir: pelicanReDoc
 
 substitutions:
   _BRANCH: master
