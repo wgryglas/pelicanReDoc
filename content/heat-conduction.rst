@@ -18,8 +18,8 @@ Introduction
 
 In the following tutorial you will learn how to:
 
-  * Create heat conduction through the copper plate
-  * Use parameters and apply it to inputs
+  * Create heat conduction through a copper plate
+  * Create parameters and parametrized inputs
   * Apply heat flux at a wall
   * Compute heat flux and display heat flow paths
 
@@ -111,17 +111,18 @@ Create Mesh
 View Mesh
 ---------------------
 
-When the mesh is ready you should see the following result. This is 2D mesh with one
-cell in `z` direction. In SimFlow all meshes are defined as 3D. The 2D flow is
-enforced by the ``empty`` boundary type assigned to the front and back sides.
+When the mesh is ready you should see the following result. This is 2D mesh 
+with one cell along `Z` direction. In SimFlow all meshes are defined as 3D. 
+The 2D flow is enforced by the ``empty`` boundary type assigned to the front 
+and back sides.
 
 In our example the mesh consists of 5 boundaries:
 
-  #. boundaries (top and bottom sides)
-  #. left
-  #. right
-  #. box_1 (derived from box geometry)
-  #. empty (front and back sides, green in the picture below)
+  #. `boundaries` (top and bottom sides)
+  #. `left`
+  #. `right`
+  #. `box_1` (derived from box geometry)
+  #. `empty` (front and back sides, green in the picture below)
 
 .. image:: ./figures/heat-conduction/ht-7-view-mesh.png
 .. :width: 400 px
@@ -129,9 +130,9 @@ In our example the mesh consists of 5 boundaries:
 
 Select Solver
 ---------------------
-Now we need to choose what type of problem we are going to solve.
-By selecting the solver we choose the appropriate numerical algorithm
-suitable to solve specific phenomena.
+Now we need to decide what type of problem we are going to solve. 
+By selecting the solver we choose the  numerical algorithm that will be used 
+to simulate specific phenomena.
 
 For this tutorial, we will choose the ``Laplacian`` solver.
 This solver implements a Finite Volume Method to solve the `Laplace Equation`:
@@ -168,8 +169,8 @@ Create Parameters ( I )
 Create Parameters ( II )
 ----------------------------------------
 
-While we are still in the ``Parameters`` panel we will add next parameters in
-the same way as before:
+While we are still in the ``Parameters`` panel we will add additiona parameters
+using analogous steps:
 
   #. `Cp` = :input:`390`
   #. `rho` = :input:`8960`
@@ -194,16 +195,16 @@ Box Boundary Heat Flux
 ----------------------------------------
 
 For the `box_1` boundary we will assign heat flux equal
-:math:`0.1[\frac{W}{s m^2}]`. The collection of available boundary
-conditions doesn't contain exactly the heat flux condition. However, it
-is possible the achieve the same effect by using the ``Fixed Gradient``
-condition. To do this we will use the
-`Fourier Law`:
+:math:`0.1[\frac{W}{s \cdot m^2}]`. The list of available boundary conditions 
+does not contain a specific heat flux condition. However, it is possible the 
+achieve the same effect by using the ``Fixed Gradient`` condition. To do this 
+we will use the `Fourier Law`:
 
 .. math::
     q = -\kappa \cdot \nabla T \rightarrow \nabla T = -\frac{q}{\kappa}
 
 To apply heat flux at `box_1` wall:
+
   #. Go to ``Boundary Conditions`` panel
   #. Select `box_1` boundary
   #. Change ``Type`` to ``Fixed Gradient``
@@ -254,11 +255,10 @@ results during the calculation.
 Run Simulation
 ----------------------------------------
 
-Finally, we can start the simulation. The `Laplace Equation` is a linear partial
-differential equation and can be solved just in 1 iteration. We
-should expect that the solver will converge just after making one iteration.
-We do not have to change maximum ``Number of Iterations`` because solver will
-stop when the convergence criterion is fulfilled.
+Now we can start the simulation. The Laplace Equation is a linear partial 
+differential equation and can be solved in just one iteration. 
+We do not have to change maximum ``Number of Iterations`` because the solver 
+will stop as soon as the convergence criterion is fulfilled.
 
   #. Go to ``Run`` panel
   #. Click on ``Run Simulation`` button
@@ -269,10 +269,11 @@ stop when the convergence criterion is fulfilled.
 View Results
 ----------------------------------------
 
-In the `Create Slice Monitor`_ slide we have to add slice for sampling results
-during the calculation. We can preview the results in the ``Slices`` tab.
+In the `Create Slice Monitor`_ step we have added a slice for sampling results
+during the calculation. We can preview the results in the ``Slices`` tab of 
+graphics panel.
 
-  #. Go to ``Slices`` tab in the 3D graphics window
+  #. Go to ``Slices`` tab in the 3D graphics panel
   #. Click on ``Adjust range to data`` button
 
 .. image:: ./figures/heat-conduction/ht-17-view-results.png
@@ -283,8 +284,8 @@ Postprocess with ParaView
 Using the slice tool we have initially viewed results. However, a more
 comprehensive postprocessing task can be done using the ParaView application.
 
-Using the ParaView we will compute the heat flux vector field and draw heat flow
-paths.
+Using the ParaView we will compute the heat flux vector field and draw heat 
+flow paths.
 
   #. Change panel to ``Postprocessing``
   #. Click on ``ParaView`` button
@@ -330,7 +331,8 @@ We need to recompute gradient to obtain heat flux:
   #. Click on ``Calculator`` button
   #. Set ``Result Array Name`` to ``HeatFlux``
   #. Type heat flux formula ``-401 * gradT``
-     (:input:`401` value denotes copper conductivity)
+  
+     :input:`401` is the copper heat conductivity in SI units
 
 .. image:: ./figures/heat-conduction/ht-22-calculate-heat-flux.png
 
@@ -339,8 +341,13 @@ Heat Flux Streamlines
 ----------------------------------------
 
   #. Add ``StreamTracer`` filter
-  #. Specify streamline source line ``Point1`` to :vector:`-1.4 -1.5 0.05`
-  #. Set ``Point2`` to :vector:`-1.4 1.5 0.05`
+  #. Make sure that `High Resolution Line Source` is selected as ``Seed Type``.
+  #. Specify streamline source line
+  
+     ``Point1`` :vector:`-1.4 -1.5 0.05`
+    
+     ``Point2`` :vector:`-1.4 1.5 0.05`
+    
   #. Set source line ``Resolution`` to :input:`50`
   #. Click ``Apply`` to finish
 

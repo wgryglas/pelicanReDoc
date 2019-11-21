@@ -91,3 +91,7 @@ View Mesh
 
 
 .. image:: ./figures/tutorial/screenshot_16.png
+
+
+
+.. image:: ./figures/tutorial/screenshot_3.png
