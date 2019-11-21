@@ -61,11 +61,15 @@ img.banner {
 }
 
 
-tt {
+tt.literal {
     padding:3px;
+    /*padding-bottom: 5px;*/
+    /*padding-top: 8px;*/
     border-radius:3px;
     color:#c7254e;
-    background-color:rgb(249, 242, 244)
+    background-color:rgb(249, 242, 244);
+    margin-top:0;
+    margin-bottom:0;
 }
 
 span.id-number {
@@ -111,11 +115,23 @@ ol li::before {
 .scalar-input {
     margin-left:2px;
     margin-right:2px;
-    padding:3px;
+    margin-bottom:1px;
+    margin-top:1px;
+
+    /*padding-left:3px;*/
+    /*padding-right:3px;*/
+    /*padding-top:0;*/
+    /*padding-bottom:0;*/
+    padding: 3px;
+
     border-radius:3px;
     color:#c7254e;
-    background-color:rgb(249, 242, 244)
+    background-color:rgb(249, 242, 244);
+    
+    font-family: monospace;
 }
+
+
 .scalar-input:hover{
     background:#ef4570;
     color:#fff;
@@ -125,6 +141,11 @@ ol li::before {
     background:#d82854;
 }
 
+
+.vector-input {
+    padding: 0;
+    margin: 0;
+}
 .vector-input::before {
     content:'[';
     color: #c7254e;
